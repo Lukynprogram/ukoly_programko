@@ -1,0 +1,67 @@
+//Sestavte  program v jazyc C, ktery vypise kolik minut mezi dvema casovymi udaji (napr. 9:30 a 11:15 je 105 minut).
+#include <stdio.h>
+#include <stdlib.h>
+
+int timeh1;
+int timem1;
+int timeh2;
+int timem2;
+int vysledek;
+
+int vstup()
+{
+	printf("Vloz prvni cas (hodiny): ");
+	scanf("%d", &timeh1);
+	printf("Vloz prvni cas (minuty): ");
+	scanf("%d", &timem1);
+
+	printf("Vloz druhy cas (hodiny): ");
+	scanf("%d", &timeh2);
+	printf("Vloz druhy cas (minuty): ");
+	scanf("%d", &timem2);
+}
+
+int vyhodnoceni() {
+	if (timeh1 > timeh2) {
+		vysledek = (timeh1 * 60 + timem1) - (timeh2 * 60 + timem2);
+		printf("Vypocet je: %d : %d - %d : %d = %d minut. \n", timeh1, timem1, timeh2, timem2, vysledek);
+	}
+	else if (timeh1 == timeh2 and timem1 == timem2)
+	{
+		vysledek = 0;
+		printf("Vypocet je: %d : %d - %d : %d = %d minut.\n", timeh1, timem1, timeh2, timem2, vysledek);
+	}
+	else
+	{
+		vysledek = (timeh2 * 60 + timem2) - (timeh1 * 60 + timem1);
+		printf("Vypocet je: %d:%d - %d:%d = %d minut.\n", timeh2, timem2, timeh1, timem1, vysledek);
+	}
+}
+
+int cistic() 
+{
+	system("cls");
+	system("color c");
+	printf("Zadal jsi jako prvni cas: %d:%d\n", timeh1, timem1);
+	printf("Zadal jsi jako druhy cas: %d:%d\n\n", timeh2, timem2);
+}
+
+int sign() 
+{
+	printf("\n\nIIII                 IIII\n");
+	printf("IIII                 IIII\n");
+	printf("IIII                 IIII\n");
+	printf("IIII                 IIII\n");
+	printf("IIII         IIII    IIII\n");
+	printf("IIIIIIIIII   IIIIIIIIIIII\n");
+	printf("IIIIIIIIII    IIIIIIIIII    Autor: Lukas Jonak\n\n");
+}
+
+int main()
+{
+	vstup();
+	cistic();
+	vyhodnoceni();
+	sign();
+	system("PAUSE");
+}
