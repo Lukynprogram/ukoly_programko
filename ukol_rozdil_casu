@@ -24,12 +24,12 @@ int vstup()
 int vyhodnoceni() {
 	if (timeh1 > timeh2) {
 		vysledek = (timeh1 * 60 + timem1) - (timeh2 * 60 + timem2);
-		printf("Vypocet je: %d : %d - %d : %d = %d minut. \n", timeh1, timem1, timeh2, timem2, vysledek);
+		printf("Vypocet je: %d:%d - %d:%d = %d minut. \n", timeh1, timem1, timeh2, timem2, vysledek);
 	}
 	else if (timeh1 == timeh2 and timem1 == timem2)
 	{
 		vysledek = 0;
-		printf("Vypocet je: %d : %d - %d : %d = %d minut.\n", timeh1, timem1, timeh2, timem2, vysledek);
+		printf("Vypocet je: %d:%d - %d:%d = %d minut.\n", timeh1, timem1, timeh2, timem2, vysledek);
 	}
 	else
 	{
