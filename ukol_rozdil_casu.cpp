@@ -1,4 +1,3 @@
-```cpp
 //Sestavte  program v jazyc C, ktery vypise kolik minut mezi dvema casovymi udaji (napr. 9:30 a 11:15 je 105 minut).
 #include <stdio.h>
 #include <stdlib.h>
@@ -66,4 +65,3 @@ int main()
 	sign();
 	system("PAUSE");
 }
-```
