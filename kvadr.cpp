@@ -61,7 +61,7 @@ int main()
             }
             else
             {
-                printf("Jsi kokot... ");
+                printf("Jsi mimo... ");
             }
         }
 
